@@ -37,7 +37,7 @@
     <a-assets>
       <video type="video/mp4" id="vid" loop="true" src="./assets/Anisotropic.mp4" crossorigin>
     </a-assets>
-    <a-marker preset="hiro" vidhandler>
+    <a-marker type="pattern" preset="custom" url="./assets/pattern.patt">
       <a-plane position='0 0 0' scale="1 1.4 1" rotation="-90 0 0" material='opacity: 1; src:#vid'></a-plane>
     </a-marker>
     <a-entity camera></a-entity>
