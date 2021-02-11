@@ -18,8 +18,8 @@
     <section id="main">
       <div id="immagineMain"></div>
       <p id="titolo">Hydro <br>Lighting <br>Surfaces</p>
-      <p class="paragrafoMain">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua.</p>
+      <p class="paragrafoMain"><span style="font-family: suissitalic">"Not cement, nor wood, not steel, nor glass is the most resistant material. <br>The most
+        resistant material in construction is art."</span><br><br>- Gio Ponti</p>
     </section>
     <section id="WWWWW">
       <div class="w" id="Start" style="left: 7vw;">
@@ -78,6 +78,16 @@
     src: url('./assets/SuisseIntl-Regular-WebXL.woff');
   }
 
+  @font-face {
+    font-family: suissitalic;
+    src: url('./assets/SuisseIntl-ThinItalic.otf');
+  }
+
+  @font-face {
+    font-family: suissthin;
+    src: url('./assets/SuisseIntl-Thin.otf');
+  }
+
   html,
   body {
     overflow-x: hidden;
@@ -106,6 +116,7 @@
   }
 
   .paragrafoMain {
+    font-family: suissthin;
     position: absolute;
     width: 65%;
     bottom: 0;
