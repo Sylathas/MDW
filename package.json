@@ -1,5 +1,5 @@
 {
-  "name": "MDW",
+  "name": "mdw",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -15,7 +15,6 @@
     "type": "git",
     "url": "git+https://github.com/Sylathas/MDW.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
