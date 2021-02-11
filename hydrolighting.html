@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>WWWWW - Anisotrop</title>
+  <title>WWWWW - HLS</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <script src="./scripts/anime.min.js"></script>
@@ -16,7 +16,7 @@
   <div id="bianco"></div>
   <section id="main">
     <div id="immagineMain"></div>
-    <p id="titolo">Anisotrop</p>
+    <p id="titolo">Hydro <br>Lighting <br>Surfaces</p>
     <p class="paragrafoMain">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
       dolore magna aliqua.</p>
   </section>
@@ -29,35 +29,37 @@
         laborum.</p>
     </div>
     <div class="w" id="What">
-      <p>Anisotropy is a physical property meaning that some material properties are dependent on direction. An example of an
-        anisotropic material is wood, thanks to its veneers that warp and distort based on humidity and dryness.
-        A model may be created using modules, which ease both the construction and realization; then anisotropy governs
-        and shapes the modules, generating a structure that, in the case of wood, reacts to humidity and moisture distribution
-        in a space.
-        These deformations could fulfill aesthetic functions, but can have practical uses too.</p><br><br><br>
+      <p>Hydro Lighting Surface is a membrane covered in an epoxy resin coating, applied by silk-screen, by making
+        opposites functions such as solid/flexible and hydrophilic/hydrophobic able to be inscribed in
+        a fabric. The adhesion properties change in such a way that drops of
+        water accumulate on the printed structures, triggering further functions
+        such as hydrochromism and thermochromism. Fluorescent pigments
+        make the textile glow in the dark, which is further enhanced by the light
+        refraction of the water drops. The glow-effect is triggered by the interaction
+        with water: Wherever the conductive drops accumulate, an LED
+        circuit is temporarily completed. Use in high-visibility clothing and
+        façade construction is conceivable.
+</p><br><br><br>
     </div>
     <div class="w" id="Why">
-      <p>When talking about sustainability we always tend to think about recycling, but what about reusing? When we look
-        at it from an ecological perspective, to reuse something brings the same benefits as recycling it, not only can
-        enormous waste of material be avoided but on a design perspective we could start to look at product in a totally
-        different way.</p>
+      <p>Light and matter are typically considered separately, but what happens when light comes directly from matter?
+        Imagine buildings that are able to light up whenever it rains and crosswalks that gently glow in the dark for better
+        visibility.</p>
     </div>
     <div class="w" id="When">
-      <p>Nowadays this kind of transformation is difficult to envision inside products, but when we look at the future,
-        which thinks and looks at the problems related to an eco-sustainable present to face a healthy future, this type
-        of material can be fully exploited in various fields of industrial production, from objects to structures.</p>
+      <p>LED technology is fundamental for this kind of material. The manufacturing cost of LEDs is declining primarily
+        because of the decrease of chips and components used in the manufacturing process. This could heavily impact
+        the sustainability of this material and its uses in all fields.</p>
     </div>
     <div class="w" id="Who">
-      <p>In a world like interior design new materials equal new possibilities, we tend to think about homes
-        and cities as hard and solid, like a shelter from nature, but in a society that fully conquered nature
-        what would it feel to soften up, for example by designing spaces able to adapt to the change of climate?</p>
+      <p>New materials equal new possibilities in the fashion world, from transparent to self-repairing all the way to
+        thermochromic fabrics. A fabric that reacts to water with light brings about a whole world of possibilities;
+        think about clothes to specifically wear in the rain, or a whole fashion show under a raging storm.</p>
     </div>
     <div class="w" id="Where">
-      <p>Think of a home interior whose spatial divisions are made by warm and welcoming mobile yet rigid, semi-sheer curtains.
-        Rigid but flexible sheets of paper, mobile and resistant wood fabrics. Wood in the daily home environment could take
-        on multiple ways of use, from a single container product to flexible movable walls. Wood has not only a tactility but
-        also a certain scent that creates a physical presence and that transmits specific sensations related to the home and
-        the sense of welcome.</p>
+      <p>If you use a bike to move around town there’s a chance you had to buy portable lights to signal your presence
+        in the street, but what would happen if the water on the road pavement made your very Wheels light up, think
+        about a world where light is intrinsically built into things, and not the other way around.</p>
     </div>
     <div id="back" onclick="Back()">
     </div>
@@ -144,7 +146,7 @@
     top: 20vh;
     width:70vw;
     height: 40vh;
-    background: url(./assets/anisotrop.png) no-repeat;
+    background: url(./assets/hls.png) no-repeat;
     background-size: cover;
     opacity: 0;
   }
@@ -153,6 +155,7 @@
     font-size: 2.5em;
     margin-top: 5vh;
     margin-left: 5vw;
+    hyphens: none
   }
 
   #titolino {
@@ -221,7 +224,7 @@
     translateY: [50, 0],
     targets: titolo.listAll,
     delay: anime.stagger(50, {
-      start: 800
+      start: 500
     }),
     easing: 'easeOutExpo'
   });
@@ -229,14 +232,14 @@
     opacity: [0, 1],
     translateX: [10, 0],
     targets: "#immagineMain",
-    delay: 1200,
+    delay: 900,
     easing: 'easeOutExpo'
   });
   anime({
     opacity: [0, 1],
     translateY: [10, 0],
     targets: ".paragrafoMain",
-    delay: 1300,
+    delay: 1000,
     duration: 100,
     easing: 'easeOutExpo'
   });
@@ -256,7 +259,7 @@
           easing: 'easeOutExpo'
         });
         anime({
-          targets: "#linea-titolino",
+          targets: "#linea-titolino, #titolino",
           width: "85%",
           opacity: [0,1],
           borderWidth: "1px",
