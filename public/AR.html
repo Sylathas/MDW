@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <!-- we import arjs version without NFT but with marker + location based support -->
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>
-      <a-marker preset="hiro">
-        <a-entity>
-          <video type="video/mp4" id="poster" autoplay="true" loop="false" src="./assets/Anisotropic.mp4" webkit-playsinline>
-        </a-entity>
-        <a-video  position="0 0.2 0" src="#poster" rotation="90 180 0"></a-video>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-    <div id="bianco"><p style="position: relative; top: 50%; transform: translate(0,-50%); margin: 0;" onclick="toWebsite()">Learn more here</p></div>
-  </body>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<!-- we import arjs version without NFT but with marker + location based support -->
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+<body style="margin : 0px; overflow: hidden;">
+  <a-scene embedded arjs>
+    <a-assets>
+      <video type="video/mp4" id="vid" loop="true" src="./assets/Anisotropic.mp4" crossorigin>
+    </a-assets>
+    <a-marker preset="hiro" vidhandler>
+      <a-plane position='1 2 0' scale="2 2 2" width="2" rotation="-90 0 0" material='opacity: 1; src:#vid'></a-plane>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+  <div id="bianco">
+    <p style="position: relative; top: 50%; transform: translate(0,-50%); margin: 0;" onclick="toWebsite()">Learn more here</p>
+  </div>
+</body>
+
 </html>
 
 <style>
@@ -23,9 +27,10 @@
     src: url('./assets/SuisseIntl-Regular-WebXL.woff');
   }
 
-  body{
+  body {
     font-family: suisse;
   }
+
   .arjs-loader {
     height: 100%;
     width: 100%;
@@ -45,7 +50,7 @@
     color: white;
   }
 
-  #bianco{
+  #bianco {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -57,15 +62,36 @@
     transition: 1s;
   }
 
-  p{
+  p {
     transition: 1s;
   }
 </style>
 
 <script>
-  function toWebsite(){
+  function toWebsite() {
     $("p").css("opacity", "0");
     $("#bianco").css("height", "100vh");
-    setTimeout(function(){ window.location.href = "./index.html"; }, 1000);
+    setTimeout(function() {
+      window.location.href = "./index.html";
+    }, 1000);
   }
+
+  AFRAME.registerComponent('vidhandler', {
+    init: function() {
+      this.toggle = false;
+      this.vid = document.querySelector("#vid")
+      this.vid.pause()
+    },
+    tick: function() {
+      if (this.el.object3D.visible == true) {
+        if (!this.toggle) {
+          this.toggle = true;
+          this.vid.play();
+        }
+      } else {
+        this.toggle = false;
+        this.vid.pause();
+      }
+    }
+  });
 </script>
