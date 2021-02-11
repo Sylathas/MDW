@@ -82,12 +82,9 @@
       <video type="video/mp4" id="vid" loop="true" src="./assets/Hydro.mp4" crossorigin>
     </a-assets>
     <a-marker lerpsmooth id="marker" preset="hiro" vidhandler>
-      <a-plane position='2 5.1 0' scale="5 7 1" rotation="-90 0 0" material='opacity: 1; src:#vid'></a-plane>
+      <!--<a-plane position='2 5.1 0' scale="5 7 1" rotation="-90 0 0" material='opacity: 1; src:#vid'></a-plane>-->
     </a-marker>
-    <a-box id="smoothed-box" color="red" position="0 0 0" material="oopacity: 0.5;">
-      <a-text value="top" align="center" position="0 0.5 0" rotation="-90 0 0" side="double"></a-text>
-      <a-text value="front" align="center" position="0 0 0.5" rotation="0 0 0" side="double"></a-text>
-    </a-box>
+    <a-plane position='2 5.1 0' scale="5 7 1" rotation="-90 0 0" material='opacity: 1; src:#vid' id="smoothed-box"></a-plane>
     <a-camera-static/>
   </a-scene>
   <div id="bianco">
