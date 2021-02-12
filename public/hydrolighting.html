@@ -310,7 +310,9 @@
   function Back() {
     if (section == 2) {
       section = 1;
-      $("#Start").css("left", "7vw");
+      setTimeout(function(){ $("#What").css("display", "none"); }, 1000);
+      $("#Start").css("display", "initial");
+      setTimeout(function(){ $("#Start").css("left", "7vw"); }, 10);
       $("#What").css("left", "107vw");
       $('#titolino').text('WWWWW');
       $('#titolino').find('span').remove();
@@ -323,7 +325,9 @@
       }, 1000);
     } else if (section == 3) {
       section = 2;
-      $("#What").css("left", "7vw");
+      setTimeout(function(){ $("#Why").css("display", "none"); }, 1000);
+      $("#What").css("display", "initial");
+      setTimeout(function(){ $("#What").css("left", "7vw"); }, 10);
       $("#Why").css("left", "107vw");
       $('#titolino').text('What');
       $('#titolino').find('span').remove();
@@ -335,7 +339,9 @@
       }, 1000);
     } else if (section == 4) {
       section = 3;
-      $("#Why").css("left", "7vw");
+      setTimeout(function(){ $("#When").css("display", "none"); }, 1000);
+      $("#Why").css("display", "initial");
+      setTimeout(function(){ $("#Why").css("left", "7vw"); }, 10);
       $("#When").css("left", "107vw");
       $('#titolino').text('Why');
       $('#titolino').find('span').remove();
@@ -347,7 +353,9 @@
       }, 1000);
     } else if (section == 5) {
       section = 4;
-      $("#When").css("left", "7vw");
+      setTimeout(function(){ $("#Who").css("display", "none"); }, 1000);
+      $("#When").css("display", "initial");
+      setTimeout(function(){ $("#When").css("left", "7vw"); }, 5);
       $("#Who").css("left", "107vw");
       $('#titolino').text('When');
       $('#titolino').find('span').remove();
@@ -359,7 +367,9 @@
       }, 1000);
     } else if (section == 6) {
       section = 5;
-      $("#Who").css("left", "7vw");
+      setTimeout(function(){ $("#Where").css("display", "none"); }, 1000);
+      $("#Who").css("display", "initial");
+      setTimeout(function(){ $("#Who").css("left", "7vw"); }, 5);
       $("#Where").css("left", "107vw");
       $('#titolino').text('Who');
       $('#titolino').find('span').remove();
@@ -376,8 +386,10 @@
   function Next() {
     if (section == 1) {
       section = 2;
+      setTimeout(function(){$("#Start").css("display", "none");}, 1000);
+      $("#What").css("display", "initial");
+      setTimeout(function(){ $("#What").css("left", "7vw"); }, 5);
       $("#Start").css("left", "-93vw");
-      $("#What").css("left", "7vw");
       $('#titolino').text('What');
       $('#titolino').find('span').remove();
       titolino = new Letterize({
@@ -389,8 +401,10 @@
       }, 1000);
     } else if (section == 2) {
       section = 3;
+      setTimeout(function(){$("#What").css("display", "none");}, 1000);
+      $("#Why").css("display", "initial");
+      setTimeout(function(){ $("#Why").css("left", "7vw"); }, 5);
       $("#What").css("left", "-93vw");
-      $("#Why").css("left", "7vw");
       $('#titolino').text('Why');
       $('#titolino').find('span').remove();
       titolino = new Letterize({
@@ -401,8 +415,10 @@
       }, 1000);
     } else if (section == 3) {
       section = 4;
+      setTimeout(function(){$("#Why").css("display", "none");}, 1000);
+      $("#When").css("display", "initial");
+      setTimeout(function(){ $("#When").css("left", "7vw"); }, 5);
       $("#Why").css("left", "-93vw");
-      $("#When").css("left", "7vw");
       $('#titolino').text('When');
       $('#titolino').find('span').remove();
       titolino = new Letterize({
@@ -413,8 +429,10 @@
       }, 1000);
     } else if (section == 4) {
       section = 5;
+      setTimeout(function(){$("#When").css("display", "none");}, 1000);
+      $("#Who").css("display", "initial");
+      setTimeout(function(){ $("#Who").css("left", "7vw"); }, 5);
       $("#When").css("left", "-93vw");
-      $("#Who").css("left", "7vw");
       $('#titolino').text('Who');
       $('#titolino').find('span').remove();
       titolino = new Letterize({
@@ -425,8 +443,10 @@
       }, 1000);
     } else if (section == 5) {
       section = 6;
+      setTimeout(function(){$("#Who").css("display", "none");}, 1000);
+      $("#Where").css("display", "initial");
+      setTimeout(function(){ $("#Where").css("left", "7vw"); }, 5);
       $("#Who").css("left", "-93vw");
-      $("#Where").css("left", "7vw");
       $('#titolino').text('Where');
       $('#titolino').find('span').remove();
       titolino = new Letterize({
